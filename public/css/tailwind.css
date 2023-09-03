@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+   --primary-color: rgba(13, 43, 91, 1);
+ }
+
+.sidebar {
+   @apply fixed h-screen z-20 left-0 top-0 rounded-none p-4 shadow-xl shadow-blue-gray-900/5;
+   background-color: var(--primary-color);
+   transition: width 0.3s ease;
+}
+
+.wrapper {
+   @apply h-screen relative overflow-auto overflow-x-hidden w-full;
+   background-color: #f0f5fa;
+}
+
+.body{
+   background-color: #e4ebf7;
+}
+
+.burger-btn {
+   display: flex;
+}
+
+.burger-btn-mobile {
+   @apply hidden;
+}
+
+.footer-desk {
+   @apply absolute bottom-0 w-full flex mx-10 h-16;
+   border-top: 1px solid #c5c6c8;
+}
+
+.active-btn {
+   border-top: 1px solid #428df5;
+   border-radius: 0;
+   color: #428df5;
+}
+
+@media only screen and (min-width:0px) and (max-width:767px) {
+   .footer-desk {
+      display: none;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .footer-desk {
+      margin-left: 0px;
+   }
+}
+
+@media only screen and (min-width:0px) and (max-width:912px) {
+   .sidebar {
+     display: none;
+   }
+   .burger-btn {
+      display: none;
+   }
+  
+ }
